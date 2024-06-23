@@ -4,7 +4,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "db:migrate": "tsx ./src/database/migrate.ts"
+    "db:migrate": "tsx ./src/database/migrate.ts",
+    "build": "bun build src/index.ts --outdir=dist"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.3",
