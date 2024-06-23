@@ -1,0 +1,22 @@
+{
+  "name": "kuvas",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "db:migrate": "tsx ./src/database/migrate.ts"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.3",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.31.2",
+    "elysia": "latest",
+    "pg": "^8.12.0",
+    "tsx": "^4.15.7"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "drizzle-kit": "^0.22.7"
+  },
+  "module": "src/index.js"
+}
