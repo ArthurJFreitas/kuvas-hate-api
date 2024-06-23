@@ -1,6 +1,6 @@
 import { Elysia, t } from "elysia";
 import { insertHated, getHateds } from "./controllers/hate";
-
+import { cors } from '@elysiajs/cors'
 
 const app = new Elysia().get("/hateds", async ({set}) => {
 const hateds = await getHateds()
@@ -20,9 +20,7 @@ const hateds = await getHateds()
       image: t.String()
   })
 })
+.use(cors())
 .listen(3000)
 
 
-console.log(
-  process.env
-);
